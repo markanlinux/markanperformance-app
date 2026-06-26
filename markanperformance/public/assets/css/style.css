@@ -1,0 +1,403 @@
+:root {
+  --background1: #000d00;
+  --background2: #1a261a;
+  --background3: #263326;
+  --text: #f2fff2;
+  --accent: #cd7f32;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 100;
+  src: url('../fonts/roboto_100.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 200;
+  src: url('../fonts/roboto_200.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300;
+  src: url('../fonts/roboto_300.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: url('../fonts/roboto_400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  src: url('../fonts/roboto_500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 600;
+  src: url('../fonts/roboto_600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: url('../fonts/roboto_700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 800;
+  src: url('../fonts/roboto_800.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 900;
+  src: url('../fonts/roboto_900.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background1);
+  color: var(--text);
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ================================================
+   AUTH (login / register) - centriran layout
+   ================================================ */
+
+body.auth-page {
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+  background-color: var(--background2);
+  padding: 2rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 512px;
+}
+
+.auth-box img {
+  width: 100%;
+}
+
+.auth-box a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.auth-box a span {
+  color: var(--accent);
+}
+
+.auth-box a span:hover {
+  text-decoration: underline;
+}
+
+/* ================================================
+   NAVIGACIJA (sidebar)
+   ================================================ */
+
+nav {
+  background-color: var(--background2);
+  border-right: 2px solid var(--accent);
+  box-shadow: 0 0 4px var(--accent);
+  width: 240px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+nav img {
+  width: 100%;
+}
+
+/* ================================================
+   GUMBI
+   ================================================ */
+
+.button {
+  background-color: var(--background3);
+  border: 2px solid var(--accent);
+  color: var(--text);
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s linear;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: var(--accent);
+  color: var(--background1);
+}
+
+/* ================================================
+   MAIN SADRŽAJ
+   ================================================ */
+
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+.page-header {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--background2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+
+/* ================================================
+   TABLICE
+   ================================================ */
+
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+main table tr {
+  background-color: var(--background2);
+}
+
+main table th {
+  padding: 1rem;
+  text-align: left;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+main table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+td.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ================================================
+   FORME I INPUTI
+   ================================================ */
+
+input,
+select,
+textarea {
+  background-color: var(--background3);
+  border: 2px solid transparent;
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.2s linear;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 4px var(--accent);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text);
+  opacity: 0.25;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="file"] {
+  padding: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form-container {
+  background-color: var(--background2);
+  padding: 2rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 512px;
+}
+
+/* ================================================
+   PORUKE (greška / uspjeh)
+   ================================================ */
+
+.error,
+.success {
+  color: var(--accent);
+}
+
+/* ================================================
+   STATISTIKE (admin dashboard)
+   ================================================ */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stat-card {
+  background-color: var(--background2);
+  border-radius: 4px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.empty-message {
+  background-color: var(--background2);
+  padding: 1.5rem;
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+/* ================================================
+   OZNAKE STATUSA (badge)
+   ================================================ */
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-available {
+  background-color: var(--background3);
+  color: var(--text);
+  border: 2px solid #4caf50;
+}
+
+.badge-pending {
+  background-color: var(--background3);
+  color: var(--text);
+  border: 2px solid var(--accent);
+}
+
+.badge-sold {
+  background-color: var(--background3);
+  color: var(--text);
+  border: 2px solid #888;
+}
+
+/* ================================================
+   KARTICE AUTOMOBILA
+   ================================================ */
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.car-card {
+  background-color: var(--background2);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: var(--background3);
+}
+
+.car-image-preview {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.car-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.car-info h3 {
+  color: var(--accent);
+}
+
+.car-year {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.car-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.car-description {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.car-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
