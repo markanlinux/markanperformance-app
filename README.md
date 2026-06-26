@@ -47,8 +47,6 @@ Windows
 
 - /opt/lampp/htdocs/markanperformance
 
-Aplikacija ne koristi .htaccess niti mod_rewrite, pa radi identično na Windowsu i Linuxu, u svakom XAMPP-u (ili bilo kojem Apache + PHP + MySQL poslužitelju), bez dodatne konfiguracije.
-
 ### 2. Izrada baze podataka
 1. Pokreni Apache i MySQL u XAMPP Control Panelu.
 2. Otvori phpMyAdmin (http://localhost/phpmyadmin).
